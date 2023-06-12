@@ -1,0 +1,9 @@
+This is file 2.
+It contains some text.
+This line is different.
+Additional line hnana
+Kiwi
+Orange
+Strawberry
+ere.
+

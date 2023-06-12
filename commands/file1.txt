@@ -1,0 +1,9 @@
+This is file 1.
+It contains some text.
+This line is different.
+Another line here.
+Apple
+Banana
+Orange
+Pineapple
+
