@@ -19,6 +19,38 @@ int main() {
 }
 ```
 2.	cp: 파일이나 디렉토리를 복사하는 명령어입니다. 원본 파일의 내용을 새로운 위치에 복사하여 생성합니다.
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	    const char* source_file = "source_file.txt";
+	        const char* destination_file = "destination_file.txt";
+		    
+		    FILE* source = fopen(source_file, "rb");
+		        if (source == NULL) {
+				        perror("fopen");
+					        return 1;
+						    }
+			    
+			    FILE* destination = fopen(destination_file, "wb");
+			        if (destination == NULL) {
+					        perror("fopen");
+						        fclose(source);
+							        return 1;
+								    }
+				    
+				    int ch;
+				        while ((ch = fgetc(source)) != EOF) {
+						        fputc(ch, destination);
+							    }
+					    
+					    fclose(source);
+					        fclose(destination);
+						    
+						    return 0;
+}
+```
 3.	mv: 파일이나 디렉토리의 이름을 변경하거나 위치를 옮기는 명령어입니다. 파일이나 디렉토리를 다른 경로로 이동하거나, 이름을 변경할 때 사용됩니다.
 4.	rm: 파일이나 디렉토리를 삭제하는 명령어입니다. 기본적으로 파일을 삭제하지만, -r 옵션을 사용하여 디렉토리와 그 내부의 모든 파일과 하위 디렉토리를 삭제할 수 있습니다.
 5.	pwd: 현재 작업 중인 디렉토리의 경로를 출력하는 명령어입니다.
